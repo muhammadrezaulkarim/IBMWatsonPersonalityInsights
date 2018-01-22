@@ -38,7 +38,7 @@ for person in personsDataList:
     emailsTextFile.close()
     
     #use Watson PersonalityInsightsV3
-    personality_insights = watson_developer_cloud.PersonalityInsightsV3(version='2017-10-13',username='94cb29d7-6094-4308-9b02-a2ad5db6b57f',password='2ZYIke5niULJ')
+    personality_insights = watson_developer_cloud.PersonalityInsightsV3(version='2017-10-13',username='94cb29d7-6094-a2ad57f',password='2ZiLJ')
 
     with open(os.path.join(os.path.dirname('__file__'), 'profile.txt')) as personality_text:
         response = personality_insights.profile( personality_text, content_type='text/plain;charset=utf-8', content_language='en', accept_language='en',raw_scores=True, consumption_preferences=consumptionPreferences)
